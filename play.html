@@ -9,10 +9,34 @@
         align-items: center;
         justify-content: center;
       }
+
+      #popup {
+  background: #e82e20;
+  transition: ease 400ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  align-items:center;
+  justify-content: left;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+      
     </style>
   </head>
   <body>
     <div class="statbox">hello<br>test</div>
+    <div class="modal" id="popupBack"><div id="popup" style="width:2px;height:2px;"></div></div>
   </body>
   <script src="script.js"></script>
 </html>
