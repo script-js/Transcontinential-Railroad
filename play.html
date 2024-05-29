@@ -25,10 +25,11 @@
         height: 100%;
       }
 
-      body {
+      .mapbox {
         display: flex;
         align-items: center;
-        justify-content: center;
+        width: fit-content;
+        height: 100%;
       }
       
       #popup {
@@ -53,7 +54,7 @@
     </style>
   </head>
   <body>
-    <img src="map.jpg" class="map">
+    <div class="mapbox"><img src="map.jpg" class="map"></div>
     <div class="statbox">hello<br>test</div>
     <div class="modal" id="popupBack"><div id="popup" style="width:2px;height:2px;"></div></div>
   </body>
