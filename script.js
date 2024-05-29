@@ -1,4 +1,4 @@
-function popout(text) {
+  function popout(text) {
   if (!text) {
     popup.style.height = "2px"
     popup.style.width = "2px"
@@ -9,8 +9,8 @@ function popout(text) {
   } else {
     popupBack.style.display = "flex";
     setTimeout(function() {
-      popup.style.height = "70%"
-      popup.style.width = "70%"
+      popup.style.height = "65%"
+      popup.style.width = "90%"
     },50)
     setTimeout(function() {
       popup.innerHTML = text;
