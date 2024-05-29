@@ -9,8 +9,8 @@ function popout(text) {
   } else {
     popupBack.style.display = "flex";
     setTimeout(function() {
-      popup.style.height = "90%"
-      popup.style.width = "90%"
+      popup.style.height = "70%"
+      popup.style.width = "70%"
     },50)
     setTimeout(function() {
       popup.innerHTML = text;
