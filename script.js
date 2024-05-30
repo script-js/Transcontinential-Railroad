@@ -35,3 +35,7 @@ function move(off) {
     },1)
   }
 }
+
+function finish() {
+  popout("<h1>Your Score: " + (parseInt(money.innerHTML) - parseInt(bias.innerHTML)) + "</h1>")
+}
