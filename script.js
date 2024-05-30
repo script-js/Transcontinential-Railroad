@@ -1,4 +1,4 @@
-  function popout(text) {
+function popout(text) {
   if (!text) {
     popup.style.height = "2px"
     popup.style.width = "2px"
@@ -15,5 +15,22 @@
     setTimeout(function() {
       popup.innerHTML = text;
     },400)
+  }
+}
+
+var moveint;
+
+function move(off) {
+  if (off == true) {
+    clearInterval(moveint)
+  } else {
+    setInterval(function() {
+      var digit = parseInt(char.style.right) + 1;
+      if (digit == 89) {
+        finish()
+      } else {
+        char.style.right = digit + "%"
+      }
+    },100)
   }
 }
