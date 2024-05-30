@@ -1,3 +1,5 @@
+// Encounters: raid, buffalo grounds, smaller land
+
 function popout(text) {
   if (!text) {
     popup.style.height = "2px"
