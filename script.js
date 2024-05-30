@@ -31,7 +31,7 @@ function move(off) {
         console.log()
         finish()
       } else {
-        console.log("1")
+        money.innerHTML = parseInt(money.innerHTML) - 10;
         char.style.right = digit + "%"
       }
     },100)
@@ -39,5 +39,5 @@ function move(off) {
 }
 
 function finish() {
-  popout("<h1>Your Score: " + (parseInt(money.innerHTML) - parseInt(bias.innerHTML)) + "</h1>")
+  popout("<h1>Your Score: " + (parseInt(money.innerHTML) - (parseInt(bias.innerHTML) * 10)) + "</h1>")
 }
