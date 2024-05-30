@@ -24,9 +24,9 @@ function move(off) {
   if (off == true) {
     clearInterval(moveint)
   } else {
-    setInterval(function() {
-      var digit = parseInt(char.style.right) + 0.5;
-      if (digit == 89) {
+    moveint = setInterval(function() {
+      var digit = parseInt(char.style.right) + 1;
+      if (digit < 89) {
         move(true)
         finish()
       } else {
