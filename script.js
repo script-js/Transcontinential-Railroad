@@ -26,7 +26,7 @@ function move(off) {
   } else {
     moveint = setInterval(function() {
       var digit = parseInt(char.style.right) + 0.5;
-      if (digit > 89) {
+      if (digit > 88) {
         move(true)
         console.log()
         finish()
