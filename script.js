@@ -25,7 +25,7 @@ function move(off) {
     clearInterval(moveint)
   } else {
     moveint = setInterval(function() {
-      var digit = parseInt(char.style.right) + 0.5;
+      var digit = parseInt(char.style.right) + 1;
       if (digit > 88) {
         move(true)
         console.log()
@@ -34,7 +34,7 @@ function move(off) {
         console.log("1")
         char.style.right = digit + "%"
       }
-    },1)
+    },100)
   }
 }
 
