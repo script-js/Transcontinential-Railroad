@@ -25,12 +25,13 @@ function move(off) {
     clearInterval(moveint)
   } else {
     setInterval(function() {
-      var digit = parseInt(char.style.right) + 1;
+      var digit = parseInt(char.style.right) + 0.5;
       if (digit == 89) {
+        move(true)
         finish()
       } else {
         char.style.right = digit + "%"
       }
-    },100)
+    },1)
   }
 }
