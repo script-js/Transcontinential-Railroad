@@ -31,13 +31,21 @@ function move(off) {
         console.log()
         finish()
       } else {
-        money.innerHTML = parseInt(money.innerHTML) - 10;
-        char.style.right = digit + "%"
+        money.innerHTML = parseInt(money.innerHTML) - 5;
+        if (parseInt(money.innerHTML) < 1) {
+          popout("<h1 style='color:#e82e20'>You Lose</h1><h2>You ran out of money!</h2>")
+        } else {
+          char.style.right = digit + "%"
+        }
       }
     },100)
   }
 }
 
 function finish() {
-  popout("<h1>Your Score: " + (parseInt(money.innerHTML) - (parseInt(bias.innerHTML) * 10)) + "</h1>")
+  popout("<h1>Your Score: " + ((parseInt(money.innerHTML) - (parseInt(negative.innerHTML) * 10)) + (parseInt(positive.innerHTML) * 10)) + "</h1>")
+}
+
+function addPoint(elem) {
+  elem.innerHTML = parseInt(elem.innerHTML) + 1;
 }
