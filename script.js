@@ -1,5 +1,13 @@
 // Encounters: raid, buffalo grounds, smaller land
 
+var checkpoints = {
+  (Math.random() * (22 - 1) + 1): "test",
+  (Math.random() * (44 - 23) + 23): "test",
+  (Math.random() * (66 - 45) + 45): "test",
+  (Math.random() * (88 - 67) + 67): "test"
+}
+
+
 function popout(text) {
   if (!text) {
     popup.style.height = "2px"
