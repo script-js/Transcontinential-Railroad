@@ -39,14 +39,13 @@ function move(off) {
     moveint = setInterval(function() {
       var digit = parseInt(char.style.right) + 1;
       var digit1 - 1
-      if (points.includes(digit)) {
+      if (points.includes(digit1)) {
         move(true)
         Object.keys(points).forEach(function(k) {
-          if (points[k] == digit) {
-            var num = k
+          if (points[k] == digit1) {
+            popout(checkpoints[k].message)
           }
         })
-        popout(checkpoints[num].message)
       } else if (digit > 88) {
         move(true)
         console.log()
