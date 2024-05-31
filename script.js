@@ -58,7 +58,7 @@ function move(off) {
           char.style.right = digit + "%"
         }
       }
-    },100)
+    },500)
   }
 }
 
