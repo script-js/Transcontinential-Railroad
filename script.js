@@ -66,6 +66,9 @@ function finish() {
   popout("<h1>Your Score: " + ((parseInt(money.innerHTML) - (parseInt(negative.innerHTML) * 10)) + (parseInt(positive.innerHTML) * 10)) + "</h1>")
 }
 
-function addPoint(elem) {
+function cAction(elem) {
+  popout()
   elem.innerHTML = parseInt(elem.innerHTML) + 1;
+  char.style.right = (parseInt(char.style.right) + 1) + "%"
+  move()
 }
