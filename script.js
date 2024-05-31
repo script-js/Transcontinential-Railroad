@@ -1,11 +1,13 @@
 // Encounters: raid, buffalo grounds, smaller land
 
-var checkpoints = {
-  Math.random() * (22 - 1) + 1: "test",
-  Math.random() * (44 - 23) + 23: "test",
-  Math.random() * (66 - 45) + 45: "test",
-  Math.random() * (88 - 67) + 67: "test"
-}
+var points = [Math.random() * (22 - 1) + 1,Math.random() * (44 - 23) + 23,Math.random() * (66 - 45) + 45,Math.random() * (88 - 67) + 67]
+
+var checkpoints = [
+  {percent: points[0],message: "test"},
+  {percent: points[1],message: "test"},
+  {percent: points[2],message: "test"},
+  {percent: points[3],message: "test"}
+]
 
 
 function popout(text) {
@@ -36,7 +38,15 @@ function move(off) {
   } else {
     moveint = setInterval(function() {
       var digit = parseInt(char.style.right) + 1;
-      if (digit > 88) {
+      if (points.includes(digit)) {
+        move(true)
+        Object.keys(points).forEach(function(k) {
+          if (points[k] == digit) {
+            var num = k
+          }
+        })
+        popout(checkpoints[num].message)
+      } else if (digit > 88) {
         move(true)
         console.log()
         finish()
