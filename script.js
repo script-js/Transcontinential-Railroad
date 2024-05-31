@@ -1,6 +1,6 @@
 // Encounters: raid, buffalo grounds, smaller land
 
-var points = [Math.random() * (22 - 1) + 1,Math.random() * (44 - 23) + 23,Math.random() * (66 - 45) + 45,Math.random() * (88 - 67) + 67]
+var points = [Math.ceil(Math.random() * (22 - 1) + 1),Math.ceil(Math.random() * (44 - 23) + 23),Math.ceil(Math.random() * (66 - 45) + 45),Math.ceil(Math.random() * (88 - 67) + 67)]
 
 var checkpoints = [
   {percent: points[0],message: "test"},
