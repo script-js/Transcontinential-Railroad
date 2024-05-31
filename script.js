@@ -1,6 +1,6 @@
 // Encounters: raid, buffalo grounds, smaller land
 
-var points = [Math.ceil(Math.random() * (22 - 1) + 1),Math.ceil(Math.random() * (44 - 23) + 23),Math.ceil(Math.random() * (66 - 45) + 45),Math.ceil(Math.random() * (88 - 67) + 67)]
+var points = [Math.ceil(Math.random() * (38 - 20) + 20),Math.ceil(Math.random() * (56 - 39) + 39),Math.ceil(Math.random() * (75 - 57) + 57),Math.ceil(Math.random() * (88 - 76) + 76)]
 
 var checkpoints = [
   {percent: points[0],message: "test"},
@@ -38,6 +38,7 @@ function move(off) {
   } else {
     moveint = setInterval(function() {
       var digit = parseInt(char.style.right) + 1;
+      var digit1 - 1
       if (points.includes(digit)) {
         move(true)
         Object.keys(points).forEach(function(k) {
