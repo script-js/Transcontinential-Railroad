@@ -3,10 +3,10 @@
 var points = [Math.ceil(Math.random() * (38 - 20) + 20),Math.ceil(Math.random() * (56 - 39) + 39),Math.ceil(Math.random() * (75 - 57) + 57),Math.ceil(Math.random() * (88 - 76) + 76)]
 
 var checkpoints = [
-  {percent: points[0],message: "test"},
-  {percent: points[1],message: "test"},
-  {percent: points[2],message: "test"},
-  {percent: points[3],message: "test"}
+  {percent: points[0],message: "test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>"},
+  {percent: points[1],message: "test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>"},
+  {percent: points[2],message: "test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>"},
+  {percent: points[3],message: "test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>"}
 ]
 
 
