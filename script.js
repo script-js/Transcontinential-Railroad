@@ -38,7 +38,7 @@ function move(off) {
   } else {
     moveint = setInterval(function() {
       var digit = parseInt(char.style.right) + 1;
-      var digit1 - 1
+      var digit1 = digit - 1
       if (points.includes(digit1)) {
         move(true)
         Object.keys(points).forEach(function(k) {
