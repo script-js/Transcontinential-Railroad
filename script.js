@@ -97,7 +97,7 @@ function start() {
     setTimeout(function() {
       popout()
       move()
-    },1500)
+    },2500)
   },400)
 }
 
