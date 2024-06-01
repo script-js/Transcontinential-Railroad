@@ -73,7 +73,7 @@ function move(off) {
 }
 
 function finish() {
-  popout("<div><h1>Your Score: " + ((parseInt(money.innerHTML) - (parseInt(negative.innerHTML) * 10)) + (parseInt(positive.innerHTML) * 10)) + "</h1><button style='width:500px;padding:10px;'>Quit to Title</button></div>")
+  popout("<div style='text-align:center'><h1>Your Score: " + ((parseInt(money.innerHTML) - (parseInt(negative.innerHTML) * 10)) + (parseInt(positive.innerHTML) * 10)) + "</h1><button style='width:500px;padding:10px;'>Quit to Title</button></div>")
 }
 
 function cAction(elem,mover) {
