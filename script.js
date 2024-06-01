@@ -1,7 +1,7 @@
 // Encounters: raid, buffalo grounds, smaller land
 
 var points = [Math.ceil(Math.random() * (38 - 20) + 20),Math.ceil(Math.random() * (56 - 39) + 39),Math.ceil(Math.random() * (75 - 57) + 57),Math.ceil(Math.random() * (87 - 76) + 76)]
-var messages = ["test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","testw<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","aaa<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","hello"]
+var messages = [["test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>",20],["testw<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>",77],["aaa<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>",1],["hello",0]]
 
 function randMsg() {
   var num = Math.floor(Math.random() * messages.length)
@@ -11,10 +11,10 @@ function randMsg() {
 }
 
 var checkpoints = [
-  {percent: points[0],message: randMsg(), move: 0},
-  {percent: points[1],message: randMsg(), move: 0},
-  {percent: points[2],message: randMsg(), move: 0},
-  {percent: points[3],message: randMsg(), move: 0}
+  {percent: points[0],message: randMsg()},
+  {percent: points[1],message: randMsg()},
+  {percent: points[2],message: randMsg()},
+  {percent: points[3],message: randMsg()}
 ]
 
 
@@ -51,8 +51,8 @@ function move(off) {
         move(true)
         Object.keys(points).forEach(function(k) {
           if (points[k] == digit1) {
-            popout(checkpoints[k].message)
-            char.style.top = (parseInt(char.style.top) + checkpoints[k].move) + "%"
+            popout(checkpoints[k].message[0])
+            char.style.top = (parseInt(char.style.top) + checkpoints[k].message[1]) + "%"
           }
         })
       } else if (digit > 88) {
