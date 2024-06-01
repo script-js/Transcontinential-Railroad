@@ -89,3 +89,16 @@ function cAction(elem,mover) {
 function moneyAdd(amnt) {
   money.innerHTML = parseInt(money.innerHTML) + amnt;
 }
+
+function start() {
+  popout()
+  setTimeout(function() {
+    popoout("<h1>Get Ready!</h1>")
+    setTimeout(function() {
+      popout()
+      move()
+    },1500)
+  },400)
+}
+
+popout("tutorial<a href='javascript:start()'><button style='width:500px;padding:10px;'>Start</button></a>")
