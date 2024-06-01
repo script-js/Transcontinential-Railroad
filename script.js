@@ -80,7 +80,7 @@ function cAction(elem,mover) {
   elem.innerHTML = parseInt(elem.innerHTML) + 1;
   char.style.right = (parseInt(char.style.right) + 1) + "%"
   if (mover) {
-    char.style.right = (parseInt(char.style.right) + mover) + "%"
+    char.style.top = (parseInt(char.style.top) + mover) + "%"
   }
   move()
 }
