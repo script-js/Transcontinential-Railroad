@@ -93,7 +93,7 @@ function moneyAdd(amnt) {
 function start() {
   popout()
   setTimeout(function() {
-    popoout("<h1>Get Ready!</h1>")
+    popout("<h1>Get Ready!</h1>")
     setTimeout(function() {
       popout()
       move()
