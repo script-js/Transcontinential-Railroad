@@ -1,7 +1,7 @@
 // Encounters: raid, buffalo grounds, smaller land
 
 var points = [Math.ceil(Math.random() * (38 - 20) + 20),Math.ceil(Math.random() * (56 - 39) + 39),Math.ceil(Math.random() * (75 - 57) + 57),Math.ceil(Math.random() * (87 - 76) + 76)]
-var messages = [["test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>",20],["testw<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>",77],["aaa<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>",1],["hello",0]]
+var messages = ["test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","testw<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","aaa<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","hello"]
 
 function randMsg() {
   var num = Math.floor(Math.random() * messages.length)
@@ -75,9 +75,12 @@ function finish() {
   popout("<h1>Your Score: " + ((parseInt(money.innerHTML) - (parseInt(negative.innerHTML) * 10)) + (parseInt(positive.innerHTML) * 10)) + "</h1>")
 }
 
-function cAction(elem) {
+function cAction(elem,mover) {
   popout()
   elem.innerHTML = parseInt(elem.innerHTML) + 1;
   char.style.right = (parseInt(char.style.right) + 1) + "%"
+  if (mover) {
+    char.style.right = (parseInt(char.style.right) + mover) + "%"
+  }
   move()
 }
