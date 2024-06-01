@@ -1,4 +1,4 @@
-// Encounters: raid, buffalo grounds, smaller land
+// Encounters: raid, buffalo grounds, smaller land, military boarding, broken treaty, winding railroad
 
 var points = [Math.ceil(Math.random() * (38 - 20) + 20),Math.ceil(Math.random() * (56 - 39) + 39),Math.ceil(Math.random() * (75 - 57) + 57),Math.ceil(Math.random() * (87 - 76) + 76)]
 var messages = ["test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","testw<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","aaa<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","hello"]
@@ -61,7 +61,7 @@ function move(off) {
         console.log()
         finish()
       } else {
-        money.innerHTML = (parseInt(money.innerHTML) - 5) - addition;
+        money.innerHTML = parseInt(money.innerHTML) - (5 - addition);
         if (parseInt(money.innerHTML) < 1) {
           popout("<h1 style='color:#e82e20'>You Lose</h1><h2>You ran out of money!</h2>")
         } else {
