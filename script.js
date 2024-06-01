@@ -85,3 +85,7 @@ function cAction(elem,mover) {
   }
   move()
 }
+
+function moneyAdd(amnt) {
+  money.innerHTML = parseInt(money.innerHTML) + amnt;
+}
