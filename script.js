@@ -51,8 +51,8 @@ function move(off) {
         move(true)
         Object.keys(points).forEach(function(k) {
           if (points[k] == digit1) {
-            popout(checkpoints[k].message[0])
-            char.style.top = (parseInt(char.style.top) + checkpoints[k].message[1]) + "%"
+            popout(checkpoints[k].message)
+            char.style.top = (parseInt(char.style.top) + checkpoints[k].message) + "%"
           }
         })
       } else if (digit > 88) {
