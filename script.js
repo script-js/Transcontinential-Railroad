@@ -11,10 +11,10 @@ function randMsg() {
 }
 
 var checkpoints = [
-  {percent: points[0],message: "test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>", move: 0},
-  {percent: points[1],message: "test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>", move: 0},
-  {percent: points[2],message: "test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>", move: 0},
-  {percent: points[3],message: "test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>", move: 0}
+  {percent: points[0],message: randMsg(), move: 0},
+  {percent: points[1],message: randMsg(), move: 0},
+  {percent: points[2],message: randMsg(), move: 0},
+  {percent: points[3],message: randMsg(), move: 0}
 ]
 
 
