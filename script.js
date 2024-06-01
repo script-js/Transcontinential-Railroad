@@ -1,14 +1,14 @@
 // Points: raid, buffalo grounds, smaller land, military boarding, broken treaty, winding railroad, inform people on culture, land stealing
 
 var points = [Math.ceil(Math.random() * (38 - 20) + 20),Math.ceil(Math.random() * (56 - 39) + 39),Math.ceil(Math.random() * (75 - 57) + 57),Math.ceil(Math.random() * (87 - 76) + 76)]
-var messages = ["test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","testw<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","aaa<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","hello"]
+var messages = ["<h1>Raid!</h1>A group of natives has raided one of your supply sheds!<br><button onclick='cAction(negative)'>Spread the word about how scary natives are</button><button onclick='cAction(positive)'>Leave it alone</button>","<h1>Attack!</h1>A group of natives has attacked a group of your workers! All of them were either wwounded or killed.<br><button onclick='cAction(negative)'>Spread the word about how scary natives are</button><button onclick='cAction(positive)'>Leave it alone</button>","<h2>A group of Native Americans has informed you that you that the railroad is approaching their ancestral hunting grounds.</h2>You can change the route of the train, but it will cost you $50.<br><button onclick='cAction(positive,-20);moneyAdd(-20)'>Change Course</button><button onclick='cAction(negative)'>Continue Route</button>","<h2>The government has given you a plot of land that goes through native lands.</h2>If you accept it, you will save a lot of money.<br><button onclick='cAction(negative);addition = -2;'>Accept</button><button onclick='cAction(positive)'>Decline</button>"]
 var addition = 0;
 
 function randMsg() {
   var num = Math.floor(Math.random() * messages.length)
   var val = messages[num]
   messages.splice(num, 1)
-  return val;
+  return "<div style='text-align:center'>" + val + "</div>";
 }
 
 var checkpoints = [
