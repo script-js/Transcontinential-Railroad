@@ -1,4 +1,4 @@
-// Encounters: raid, buffalo grounds, smaller land, military boarding, broken treaty, winding railroad
+// Points: raid, buffalo grounds, smaller land, military boarding, broken treaty, winding railroad, inform people on culture, land stealing
 
 var points = [Math.ceil(Math.random() * (38 - 20) + 20),Math.ceil(Math.random() * (56 - 39) + 39),Math.ceil(Math.random() * (75 - 57) + 57),Math.ceil(Math.random() * (87 - 76) + 76)]
 var messages = ["test<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","testw<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","aaa<br><button onclick='cAction(negative)'>negative</button><button onclick='cAction(positive)'>positive</button>","hello"]
