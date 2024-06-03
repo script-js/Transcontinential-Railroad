@@ -13,7 +13,7 @@ function randMsg() {
 function getNewLoc() {
   var loc1 = Math.ceil(Math.random() * (85 - 20) + 20)
   var exists = false
-  checkpoints.forEach(function(k) {
+  points.forEach(function(k) {
     if (k.percent == loc1 || k.percent == (loc1 + 1) || k.percent == (loc1 + 2) || k.percent == (loc1 + 3) || k.percent == (loc1 + 4) || k.percent == (loc1 + 5) || k.percent == (loc1 - 1) || k.percent == (loc1 - 2) || k.percent == (loc1 - 3) || k.percent == (loc1 - 4) || k.percent == (loc1 - 5)) {
       exists = true
     }
