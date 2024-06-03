@@ -104,7 +104,7 @@ function start() {
 popout(`
   <div style="text-align:center">
     <h1>How to Play</h1>
-    <p>You are overseeing the development of the Central and Union Pacific railroad! You will have to make executive decisions about the railroad's construction. This game focuses on the issues that Native Americans had with the railroad, so the amount of times that you inconvenience them will be added (or removed) from your score.</p>
+    <p>You are overseeing the development of the Central and Union Pacific railroads! You will have to make executive decisions about the railroad's construction. This game focuses on the issues that Native Americans faced due to the railroad, so the amount of times that you inconvenience them will be added (or removed) from your score.</p>
     <a href='javascript:start()'><button style='width:500px;padding:10px;'>Start</button></a>
   </div>
 `)
