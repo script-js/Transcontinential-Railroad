@@ -61,7 +61,8 @@ function move(off) {
       } else {
         money.innerHTML = parseInt(money.innerHTML) - (10 - addition);
         if (parseInt(money.innerHTML) < 1) {
-          popout("<h1 style='color:#e82e20'>You Lose</h1><h2>You ran out of money!</h2>")
+          popout("<div style='text-align:center'><h1 style='color:#e82e20'>You Lose</h1><h2>You ran out of money!</h2></div>")
+          move(true)
         } else {
           char.style.right = digit + "%"
         }
