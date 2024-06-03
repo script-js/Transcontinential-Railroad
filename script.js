@@ -59,7 +59,7 @@ function move(off) {
         console.log()
         finish()
       } else {
-        money.innerHTML = parseInt(money.innerHTML) - (5 - addition);
+        money.innerHTML = parseInt(money.innerHTML) - (10 - addition);
         if (parseInt(money.innerHTML) < 1) {
           popout("<h1 style='color:#e82e20'>You Lose</h1><h2>You ran out of money!</h2>")
         } else {
@@ -102,7 +102,7 @@ function start() {
 popout(`
   <div style="text-align:center">
     <h1>How to Play</h1>
-    <p>You are the owner 
+    <p>You are overseeing the development of the Central and Union Pacific railroad!</p>
     <a href='javascript:start()'><button style='width:500px;padding:10px;'>Start</button></a>
   </div>
 `)
