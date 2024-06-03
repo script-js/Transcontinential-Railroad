@@ -17,7 +17,7 @@ function getNewLoc() {
     if (k.percent == loc1 || k.percent == (loc1 + 1) || k.percent == (loc1 + 2) || k.percent == (loc1 + 3) || k.percent == (loc1 + 4) || k.percent == (loc1 + 5) || k.percent == (loc1 - 1) || k.percent == (loc1 - 2) || k.percent == (loc1 - 3) || k.percent == (loc1 - 4) || k.percent == (loc1 - 5)) {
       exists = true
     }
-  }
+  })
   if (exists == false) {
     return loc1
   } else {
