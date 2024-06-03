@@ -62,6 +62,7 @@ function move(off) {
         money.innerHTML = parseInt(money.innerHTML) - (10 - addition);
         if (parseInt(money.innerHTML) < 1) {
           popout("<div style='text-align:center'><h1 style='color:#e82e20'>You Lose</h1><h2>You ran out of money!</h2></div>")
+          money.innerHTML = "0"
           move(true)
         } else {
           char.style.right = digit + "%"
@@ -103,7 +104,7 @@ function start() {
 popout(`
   <div style="text-align:center">
     <h1>How to Play</h1>
-    <p>You are overseeing the development of the Central and Union Pacific railroad!</p>
+    <p>You are overseeing the development of the Central and Union Pacific railroad! You will have to make executive decisions about the railroad's construction. This game focuses on the issues that Native Americans had with the railroad, so the amount of times that you inconvenience them will be added (or removed) from your score.</p>
     <a href='javascript:start()'><button style='width:500px;padding:10px;'>Start</button></a>
   </div>
 `)
