@@ -18,6 +18,12 @@ var checkpoints = [
   {percent: points[5],message: randMsg()}
 ]
 
+points.forEach(function(k) {
+  var dot1 = document.createElement("div");
+  dot1.style = "font-size:2vw;position:absolute;top:1px;right:" + points[k];
+  dot1.innerHTML = "❔"
+  document.querySelector(".mapbox").appendChild(dot1);
+})
 
 function popout(text) {
   if (!text) {
@@ -83,7 +89,7 @@ function cAction(elem,mover) {
     popout()
   }
   var dot1 = document.createElement("div")
-  dot1.style = "font-size:40px;position:absolute;top:" + char.style.top + ";right:" + char.style.right
+  dot1.style = "font-size:2vw;position:absolute;top:" + char.style.top + ";right:" + char.style.right
   if (elem == negative) {
     dot1.innerHTML = "😠"
   } else if (elem == positive) {
@@ -117,6 +123,7 @@ popout(`
   <div style="text-align:center">
     <h1>How to Play</h1>
     <p>You are overseeing the development of the Central and Union Pacific railroads! You will have to make executive decisions about the railroad's construction. This game focuses on the issues that Native Americans faced due to the railroad, so the amount of times that you positively or negatively impact their lives will be added (or removed) from your score.</p>
+    <p>The train will move until you run into an issue, then you will make a decision on how to proceed.</p>
     <a href='javascript:start()'><button style='width:500px;padding:10px;'>Start</button></a>
   </div>
 `)
