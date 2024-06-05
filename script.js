@@ -1,4 +1,4 @@
-var points = [Math.ceil(Math.random() * (38 - 20) + 20),Math.ceil(Math.random() * (56 - 39) + 39),Math.ceil(Math.random() * (75 - 57) + 57),Math.ceil(Math.random() * (85 - 76) + 76)]
+var points = [Math.ceil(Math.random() * (26 - 17) + 17),Math.ceil(Math.random() * (37 - 28) + 28),Math.ceil(Math.random() * (48 - 39) + 39),Math.ceil(Math.random() * (59 - 50) + 50),Math.ceil(Math.random() * (70 - 61) + 61),Math.ceil(Math.random() * (85 - 72) + 72)]
 var messages = ["<img style='margin:auto' width='20%' src='char/weapons.png'><h1>Raid!</h1>A group of natives has raided one of your supply sheds!<p></p><button onclick='cAction(negative)'>Spread the word about how scary natives are</button><button onclick='cAction(positive);moneyAdd(-20)'>Pay your workers not to talk about it</button>","<img style='margin:auto' width='20%' src='char/weapons.png'><h1>Attack!</h1>A group of natives has attacked a group of your workers! All of them were either wounded or killed.<p></p><button onclick='cAction(negative)'>Spread the word about how scary natives are</button><button onclick='cAction(positive);moneyAdd(-50)'>Pay your workers not to talk about it</button>","<img style='margin:auto' width='20%' src='char/head.png'><h2>A group of Native Americans has informed you that you that the railroad is approaching their ancestral hunting grounds.</h2>You can change the route of the train, but it will cost you more money.<p></p><button onclick='cAction(positive,-20); addition += -2'>Change Course</button><button onclick='cAction(negative)'>Continue Route</button>","<img style='margin:auto' width='20%' src='char/money.png'><h2>The government has given you a plot of land that goes through native lands.</h2>If you accept it, you will save a lot of money.<p></p><button onclick='cAction(negative);addition += 2;'>Accept</button><button onclick='cAction(positive)'>Decline</button>","<img style='margin:auto' width='20%' src='char/soldier.png'><h2>The government will pay you $200 if you allow a large group of military officers to get a train ride to deal with some &quot;issues&quot; with natives</h2><p></p><button onclick='cAction(negative);moneyAdd(200)'>Accept</button><button onclick='cAction(positive)'>Decline</button>","<img style='margin:auto' width='20%' src='char/buffalo.png'><h2>A group of hunters have brought their guns onto the train and are shooting buffalo from the train window.</h2><p></p><button onclick='cAction(negative);'>Leave it alone</button><button onclick='cAction(positive)'>Tell them to stop</button>","<img style='margin:auto' width='20%' src='char/treaty.png'><h2>The government is offering you some land. This land was previously protected by a treaty, but the government has declared it void without the other native tribes' consent.</h2>If you accept, you will save money.<p></p><button onclick='cAction(negative);addition += 1'>Accept</button><button onclick='cAction(positive)'>Decline</button>","<img style='margin:auto' width='20%' src='char/rail.png'><h2>If you make the railroad longer and more windy than it needs to be, you can get extra land from the government.</h2>If you do this, you will save a lot of money on land, but you will take up more ancestral native land.<p></p><button onclick='cAction(negative);addition += 2'>Windy railroad</button><button onclick='cAction(positive)'>Practical railroad</button>"]
 var addition = 0;
 
@@ -13,7 +13,9 @@ var checkpoints = [
   {percent: points[0],message: randMsg()},
   {percent: points[1],message: randMsg()},
   {percent: points[2],message: randMsg()},
-  {percent: points[3],message: randMsg()}
+  {percent: points[3],message: randMsg()},
+  {percent: points[4],message: randMsg()},
+  {percent: points[5],message: randMsg()}
 ]
 
 
@@ -77,13 +79,23 @@ function finish() {
 }
 
 function cAction(elem,mover) {
-  popout()
-  elem.innerHTML = parseInt(elem.innerHTML) + 1;
+  if (parseInt(money.innerHTML) > 10) {
+    popout()
+  }
+  var dot1 = document.createElement("div")
+  dot1.style = "font-size:40px;position:absolute;top:" + char.style.top + ";right:" + char.style.right
+  if (elem == negative) {
+    dot1.innerHTML = "😠"
+  } else if (elem == positive) {
+    dot1.innerHTML = "😀"
+  }
+  document.querySelector(".mapbox").appendChild(dot1)
   char.style.right = (parseInt(char.style.right) + 1) + "%"
   if (mover) {
     char.style.top = (parseInt(char.style.top) + mover) + "%"
   }
   move()
+  elem.innerHTML = parseInt(elem.innerHTML) + 1;
 }
 
 function moneyAdd(amnt) {
