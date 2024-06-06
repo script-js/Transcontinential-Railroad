@@ -20,7 +20,7 @@ var checkpoints = [
 
 points.forEach(function(k) {
   var dot1 = document.createElement("div");
-  dot1.style = "font-size:2vw;position:absolute;top:1px;right:" + points[k];
+  dot1.style = "font-size:2vw;position:absolute;top:1px;right:" + points[k] + "%";
   dot1.innerHTML = "❔"
   document.querySelector(".mapbox").appendChild(dot1);
 })
