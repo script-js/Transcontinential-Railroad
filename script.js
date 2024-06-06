@@ -20,8 +20,9 @@ var checkpoints = [
 
 points.forEach(function(k) {
   var dot1 = document.createElement("div");
-  dot1.style = "font-size:2vw;position:absolute;top:1px;right:" + points[k] + "%";
+  dot1.style = "font-size:2vw;position:absolute;top:1px;right:" + k + "%";
   dot1.innerHTML = "❔"
+  dot1.id = k
   document.querySelector(".mapbox").appendChild(dot1);
 })
 
@@ -59,6 +60,7 @@ function move(off) {
         Object.keys(points).forEach(function(k) {
           if (points[k] == digit1) {
             popout(checkpoints[k].message)
+            document.getElementById(points[k]).remove()
             char.style.top = (parseInt(char.style.top) + checkpoints[k].message) + "%"
           }
         })
