@@ -83,7 +83,7 @@ function move(off) {
 }
 
 function finish() {
-  popout("<div style='text-align:center'><h1>Your Score: " + ((parseInt(money.innerHTML) - (parseInt(negative.innerHTML) * 100)) + (parseInt(positive.innerHTML) * 100)) + "</h1><a href='/'><button style='width:500px;padding:10px;'>Quit to Title</button></a></div>")
+  popout("<div style='text-align:center'><h1>Your Score: " + ((parseInt(money.innerHTML) - (parseInt(negative.innerHTML) * 100)) + (parseInt(positive.innerHTML) * 100)) + "</h1><a href='/'><button style='width:500px;padding:10px;'>Quit to Title</button></a><br><a href='javascript:location.reload()'><button style='width:500px;padding:10px;'>Quit to Title</button></a></div>")
 }
 
 function cAction(elem,mover) {
