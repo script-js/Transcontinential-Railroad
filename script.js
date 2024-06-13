@@ -71,7 +71,7 @@ function move(off) {
       } else {
         money.innerHTML = parseInt(money.innerHTML) - (10 - addition);
         if (parseInt(money.innerHTML) < 1) {
-          popout("<div style='text-align:center'><h1 style='color:#e82e20'>You Lose</h1><h2>You ran out of money!</h2></div>")
+          popout("<div style='text-align:center'><h1 style='color:#e82e20'>You Lose</h1><h2>You ran out of money!</h2><a href='index.html'><button style='width:500px;padding:10px;'>Quit to Title</button></a></div>")
           money.innerHTML = "0"
           move(true)
         } else {
